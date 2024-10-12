@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Exemplo</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS externo -->
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo" width="40" height="40">
+        </a>
+        <div class="search-container">
+            <input type="search" placeholder="Buscar...">
+            <button type="submit">Pesquisar</button>
+        </div>
+
+        <div class="button-group">
+            <button type="button" id="loginButton">Botão 1</button>
+        </div>
+        
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h2>Login</h2>
+                <form>
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+
+    </nav>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/banner1.png" alt="Banner 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/banner2.png" alt="Banner 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/banner3.png" alt="Banner 3">
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <div class="image-container">
+        <a href="pagina-desejada.html">
+            <img src="img/banner.png" alt="Descrição da Imagem">
+        </a>
+    </div>    
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <img src="img/card1.jpg" alt="Card 1">
+                <div class="description">Descrição do Card 1</div>
+            </div>
+            <div class="card">
+                <img src="img/card2.jpg" alt="Card 2">
+                <div class="description">Descrição do Card 2</div>
+            </div>
+            <div class="card">
+                <img src="img/card3.jpg" alt="Card 3">
+                <div class="description">Descrição do Card 3</div>
+            </div>
+            <div class="card">
+                <img src="img/card4.jpg" alt="Card 4">
+                <div class="description">Descrição do Card 4</div>
+            </div>
+            <div class="card">
+                <img src="img/card1.jpg" alt="Card 5">
+                <div class="description">Descrição do Card 1</div>
+            </div>
+            <div class="card">
+                <img src="img/card2.jpg" alt="Card 6">
+                <div class="description">Descrição do Card 2</div>
+            </div>
+            <div class="card">
+                <img src="img/card3.jpg" alt="Card 7">
+                <div class="description">Descrição do Card 3</div>
+            </div>
+            <div class="card">
+                <img src="img/card4.jpg" alt="Card 8">
+                <div class="description">Descrição do Card 4</div>
+            </div>
+        </div>
+    </div>
+    <div class="buttoncardcontainer">
+        <button class="botaocard">Clique Aqui</button>
+    </div>
+    <div class="info-section">
+        <h2>Título da Seção</h2>
+        <p>
+            Este é um texto explicativo que fornece informações adicionais sobre o conteúdo da página. Aqui, você pode incluir detalhes relevantes, descrever produtos ou serviços, ou qualquer outra informação que ajude o usuário a entender melhor o que está sendo apresentado.
+        </p>
+    </div>
+    <div class="contact-section">
+        <h2>Contato</h2>
+        <p>Se você tiver alguma dúvida, entre em contato conosco através dos seguintes canais:</p>
+        <p><strong>E-mail:</strong> contato@exemplo.com</p>
+        <p><strong>Telefone:</strong> (11) 98765-4321</p>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-section">
+                <h2>Fale Conosco</h2>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="img/facebook-icon.png" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="img/twitter-icon.png" alt="Twitter">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="img/instagram-icon.png" alt="Instagram">
+                    </a>
+                    <a href="https://linkedin.com" target="_blank">
+                        <img src="img/linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+            <div class="rights-section">
+                <p>&copy; 2023 Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    padding: 0; /* Remove preenchimento do corpo */
+    font-family: Arial, sans-serif;
+    background-color: #000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 2000; /* Aumentando o z-index */
+}
+
+.logo img {
+    display: block;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="search"] {
+    padding: 7px 120px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.search-container button {
+    padding: 7px 10px;
+    background-color: #8400ff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.button-group button {
+    padding: 7px 10px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Garantir que as setas fiquem acima das imagens */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.image-container {
+    display: flex; /* Usa flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente (se necessário) */
+    margin: 20px 0; /* Espaçamento em cima e embaixo */
+}
+
+.image-container img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+
+.container {
+    max-width: 1200px; /* Largura máxima do container */
+    margin: auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex; /* Mantém os cards em linha */
+    justify-content: space-between; /* Distribui os cards uniformemente */
+    flex-wrap: wrap; /* Impede que os cards quebrem para a linha seguinte */
+}
+
+.card {
+    background-color: #f8f9fa; /* Cor de fundo dos cards */
+    border: 1px solid #dee2e6; /* Borda dos cards */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: calc(25% - 20px); /* Largura do card */
+    margin: 10px; /* Margem entre os cards */
+    text-align: center; /* Centraliza o texto */
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%; /* Imagem ocupa toda a largura do card */
+    height: 300px; /* Altura fixa da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+    border-top-left-radius: 5px; /* Arredonda o canto superior esquerdo */
+    border-top-right-radius: 5px; /* Arredonda o canto superior direito */
+}
+
+.description {
+    padding: 15px; /* Espaçamento interno da descrição */
+    color: #333; /* Cor do texto */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .row {
+        flex-wrap: wrap; /* Permite que os cards quebrem em várias linhas */
+        justify-content: center; /* Centraliza os cards em telas menores */
+    }
+
+    .card {
+        width: 100%; /* Faz os cards ocuparem toda a largura disponível em telas menores */
+        max-width: 300px; /* Limita a largura máxima dos cards */
+    }
+}
+
+.info-section {
+    background-color: #f0f0f0; /* Cor de fundo da seção */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin: 20px 0; /* Margem superior e inferior */
+    text-align: center; /* Centraliza o texto */
+}
+
+.info-section h2 {
+    color: #333; /* Cor do título */
+    margin-bottom: 10px; /* Margem inferior do título */
+}
+
+.info-section p {
+    color: #555; /* Cor do texto explicativo */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+.contact-section {
+    background-color: #e7f3fe; /* Cor de fundo da seção de contato */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin: 20px 0; /* Margem superior e inferior */
+    text-align: center; /* Centraliza o texto */
+}
+
+.contact-section h2 {
+    color: #007bff; /* Cor do título */
+    margin-bottom: 10px; /* Margem inferior do título */
+}
+
+.contact-section p {
+    color: #333; /* Cor do texto */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+.footer {
+    background-color: #343a40; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto */
+    padding: 5px 10px; /* Espaçamento interno */
+    margin-top: 0; /* Garante que o rodapé não tenha margem superior */
+
+.footer-content {
+    display: flex; /* Alinha os itens horizontalmente */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Centraliza verticalmente */
+}
+}
+
+.contact-section {
+    display: flex; /* Flex para alinhar o título e os ícones */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.contact-section h2 {
+    font-size: 0.9rem; /* Tamanho do título */
+    margin: 0 10px 0 0; /* Margem direita para espaçamento com os ícones */
+}
+
+.social-icons {
+    display: flex; /* Alinha os ícones em linha */
+}
+
+.social-icons a {
+    margin-right: 5px; /* Margem entre os ícones */
+}
+
+.social-icons img {
+    width: 20px; /* Largura dos ícones */
+    height: 20px; /* Altura dos ícones */
+}
+
+.buttoncardcontainer {
+    text-align: center;
+}
+
+.botaocard {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF; /* Cor do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botaocard:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
