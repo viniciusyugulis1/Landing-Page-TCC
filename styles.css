@@ -1,3 +1,11 @@
+:root {
+    --base-max-width: clamp(0rem, 80vw, 120rem);
+}
+
+html {
+    font-size: 10px;
+}
+
 body {
     margin: 0;
     padding: 0; /* Remove preenchimento do corpo */
@@ -9,7 +17,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     background-color: #000;
     position: sticky;
     top: 0;
@@ -22,11 +30,12 @@ body {
 
 .search-container {
     display: flex;
-    align-items: center;
+    align-items: stretch;
+    gap: 0.7rem;
 }
 
 .search-container input[type="search"] {
-    padding: 7px 120px;
+    width: clamp(0.7rem, 40vw, 35rem);
     border: none;
     border-radius: 3px;
     text-align: center;
@@ -61,20 +70,26 @@ body {
     width: 100%;
     margin: auto;
     overflow: hidden;
+    height: clamp(15rem, calc(21vmin + 11vmax), 48rem););
 }
 
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease;
+    height: 100%;
 }
 
 .carousel-item {
     min-width: 100%;
+    height: 100%;
 }
 
 .carousel-item img {
     width: 100%;
     display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center left;
 }
 
 .carousel-control {
@@ -84,7 +99,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 1rem;
     cursor: pointer;
     z-index: 10; /* Garantir que as setas fiquem acima das imagens */
 }
@@ -101,20 +116,20 @@ body {
     display: flex; /* Usa flexbox para centralização */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente (se necessário) */
-    margin: 20px 0; /* Espaçamento em cima e embaixo */
+    margin: 2rem auto; /* Espaçamento em cima e embaixo */
 }
 
 .image-container img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    max-width: clamp(4rem, 100vw, 100rem); /* Garante que a imagem não ultrapasse a largura do contêiner */
     height: auto; /* Mantém a proporção da imagem */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
 
 .container {
-    max-width: 1200px; /* Largura máxima do container */
+    max-width: var(--base-max-width); /* Largura máxima do container */
     margin: auto;
-    padding: 20px;
+    padding: 2rem;
 }
 
 .row {
@@ -124,13 +139,17 @@ body {
 }
 
 .card {
-    background-color: #f8f9fa; /* Cor de fundo dos cards */
-    border: 1px solid #dee2e6; /* Borda dos cards */
-    border-radius: 5px; /* Bordas arredondadas */
-    width: calc(25% - 20px); /* Largura do card */
-    margin: 10px; /* Margem entre os cards */
-    text-align: center; /* Centraliza o texto */
+    background-color: #f8f9fa;
+    border: 0.1rem solid #dee2e6;
+    border-radius: 0.5rem;
+    width: calc(25% - 2rem);
+    margin: 0.1rem;
+    text-align: center;
     box-sizing: border-box;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
 }
 
 .card img {
@@ -200,20 +219,22 @@ body {
     color: white; /* Cor do texto */
     padding: 5px 10px; /* Espaçamento interno */
     margin-top: 0; /* Garante que o rodapé não tenha margem superior */
+}
 
 .footer-content {
     display: flex; /* Alinha os itens horizontalmente */
     justify-content: space-between; /* Espaço entre os itens */
     align-items: center; /* Centraliza verticalmente */
-}
+    flex-flow: row wrap;
 }
 
-.contact-section {
+
+.footer-contact-section {
     display: flex; /* Flex para alinhar o título e os ícones */
     align-items: center; /* Alinha verticalmente */
 }
 
-.contact-section h2 {
+.footer-contact-section h2 {
     font-size: 0.9rem; /* Tamanho do título */
     margin: 0 10px 0 0; /* Margem direita para espaçamento com os ícones */
 }
